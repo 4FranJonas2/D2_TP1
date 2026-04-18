@@ -5,12 +5,12 @@ public class PlayerMovemment : MonoBehaviour
     private Rigidbody rb;
 
     [Header("Movimiento")]
-    [SerializeField] private float acceleration = 10.0f;
     [SerializeField] private float maxSpeed = 10;
-    [SerializeField] private float deceleration = 10.0f;
 
     [Header("Rotacion")]
     [SerializeField] private float rotationSpeed = 10.0f;
+    private Vector3 movment;
+    private Vector3 rotation;
 
     [Header("Disparo")]
     [SerializeField] private GameObject bulletPrefab;
@@ -20,7 +20,7 @@ public class PlayerMovemment : MonoBehaviour
 
     private Vector3 currentVelocity = Vector3.zero;
 
-    private void Awake()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
@@ -29,49 +29,32 @@ public class PlayerMovemment : MonoBehaviour
     private void Update()
     {
         Movement();
-        Rotation();
     }
 
-    private void Shoot ()
+    private void Shoot()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bulletPrefab,firePoint.position,Quaternion.identity);
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         }
     }
 
     private void Movement()
     {
-        float forwardInput = Input.GetAxisRaw("Vertical");  
-        float sideInput = Input.GetAxisRaw("Horizontal");   
+        float movementY = 0f;
 
+        if (Input.GetKey(KeyCode.Space)) movementY += 1;
+        if (Input.GetKey(KeyCode.LeftControl)) movementY -= 1;
 
-        Vector3 inputDirection = new Vector3(sideInput, 0, forwardInput).normalized;
+        float rotationInput = 0;
+        if (Input.GetKey(KeyCode.Q)) rotationInput -= 1;
+        if (Input.GetKey(KeyCode.E)) rotationInput += 1;
 
-        if (inputDirection != Vector3.zero)
-            currentVelocity += transform.TransformDirection(inputDirection) * acceleration * Time.deltaTime;
+        movment = transform.forward * Input.GetAxisRaw("Vertical") + transform.right * Input.GetAxisRaw("Horizontal") + Vector3.up * movementY;
+        transform.Translate(movment * (maxSpeed * Time.deltaTime));
+        
+        rotation = new  Vector3(0, rotationInput, 0);
+        transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
 
-        else
-            currentVelocity = Vector3.Lerp(currentVelocity, Vector3.zero, deceleration * Time.deltaTime);
-
-        currentVelocity = Vector3.ClampMagnitude(currentVelocity, maxSpeed);
-
-        transform.position += currentVelocity * Time.deltaTime;
-    }
-
-    private void Rotation()
-    {
-
-        float yaw = 0f;
-        float pitch = 0f;
-
-        if (Input.GetKey(KeyCode.LeftArrow)) yaw -= 1;
-        if (Input.GetKey(KeyCode.RightArrow)) yaw += 1;
-
-        if (Input.GetKey(KeyCode.UpArrow)) pitch -= 1;
-        if (Input.GetKey(KeyCode.DownArrow)) pitch += 1;
-
-        transform.Rotate(Vector3.up * yaw * rotationSpeed * Time.deltaTime, Space.Self);
-        transform.Rotate(Vector3.right * pitch * rotationSpeed * Time.deltaTime, Space.Self);
     }
 }
