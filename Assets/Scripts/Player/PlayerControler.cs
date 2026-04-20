@@ -1,8 +1,11 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovemment : MonoBehaviour
 {
     private Rigidbody rb;
+    [SerializeField] private GameObject explosionEffect;
+    [SerializeField] private GameObject playerShip;
 
     [Header("Movimiento")]
     [SerializeField] private float maxSpeed = 10;
@@ -57,5 +60,16 @@ public class PlayerMovemment : MonoBehaviour
         
         rotation = new  Vector3(0, rotationInput, 0);
         transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Planet"))
+        {
+            Debug.Log("Destruyendo: " + playerShip);
+
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }
