@@ -13,9 +13,9 @@ public class PlayerMovemment : MonoBehaviour
     private Vector3 rotation;
 
     [Header("Disparo")]
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private float fireRate = 0.5f;
+    [SerializeField] private float bulletSpeed = 20f;
     private float nextFireTime = 0f;
 
     private Vector3 currentVelocity = Vector3.zero;
@@ -29,13 +29,15 @@ public class PlayerMovemment : MonoBehaviour
     private void Update()
     {
         Movement();
+        Shoot();
     }
 
     private void Shoot()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Bullet bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            bullet.Logic(bulletSpeed);
         }
     }
 
