@@ -57,6 +57,5 @@ public class PlayerMovemment : MonoBehaviour
         
         rotation = new  Vector3(0, rotationInput, 0);
         transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
-
     }
 }
