@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 3887006}
   - component: {fileID: 3887005}
   - component: {fileID: 3887004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mercury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10574738}
   - component: {fileID: 10574739}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mars_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,8 @@ GameObject:
   - component: {fileID: 132753363}
   - component: {fileID: 132753362}
   - component: {fileID: 132753366}
-  m_Layer: 0
+  - component: {fileID: 132753367}
+  m_Layer: 9
   m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,6 +418,33 @@ MonoBehaviour:
   Sun: {fileID: 0}
   speed: 10
   rotationSpeed: 10
+--- !u!54 &132753367
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132753361}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &158472770
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +456,7 @@ GameObject:
   - component: {fileID: 158472773}
   - component: {fileID: 158472772}
   - component: {fileID: 158472771}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5405,7 +5433,7 @@ GameObject:
   - component: {fileID: 442485721}
   - component: {fileID: 442485720}
   - component: {fileID: 442485719}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Venus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5517,7 +5545,7 @@ GameObject:
   - component: {fileID: 484781214}
   - component: {fileID: 484781213}
   - component: {fileID: 484781212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5629,7 +5657,7 @@ GameObject:
   - component: {fileID: 489184901}
   - component: {fileID: 489184900}
   - component: {fileID: 489184899}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5739,7 +5767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505588162}
   - component: {fileID: 505588163}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Moon_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5787,7 +5815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505670283}
   - component: {fileID: 505670284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jupiter_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5835,7 +5863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 536778792}
   - component: {fileID: 536778793}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Earth_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5885,7 +5913,7 @@ GameObject:
   - component: {fileID: 568344348}
   - component: {fileID: 568344347}
   - component: {fileID: 568344346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5998,7 +6026,7 @@ GameObject:
   - component: {fileID: 590079180}
   - component: {fileID: 590079179}
   - component: {fileID: 590079178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neptune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6108,7 +6136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 662823876}
   - component: {fileID: 662823877}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Urano_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6169,18 +6197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   explosionEffect: {fileID: 382816453}
---- !u!114 &761303030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761303020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbc1ce449f81a2b4ab64559ec4c89575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimerDie
+  timeAlive: 5
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -6273,7 +6290,7 @@ GameObject:
   - component: {fileID: 1139049865}
   - component: {fileID: 1139049864}
   - component: {fileID: 1139049863}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Saturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6383,7 +6400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149536625}
   - component: {fileID: 1149536626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pluto_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6485,6 +6502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spaceship_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33288d5d9cb48974ca5181eec1b6ebab, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6502,7 +6523,7 @@ GameObject:
   - component: {fileID: 1513915268}
   - component: {fileID: 1513915267}
   - component: {fileID: 1513915266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jupiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6612,7 +6633,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1620347365}
   - component: {fileID: 1620347366}
-  m_Layer: 0
+  - component: {fileID: 1620347367}
+  m_Layer: 9
   m_Name: Mercury_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6648,8 +6670,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Orbit
   Sun: {fileID: 1620347365}
-  speed: 100
+  speed: -9.17
   rotationSpeed: 10
+--- !u!54 &1620347367
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620347364}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1637233156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,7 +6709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637233157}
   - component: {fileID: 1637233158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Saturn_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6708,7 +6757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1638432531}
   - component: {fileID: 1638432532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Venus_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6785,7 +6834,7 @@ GameObject:
   - component: {fileID: 1815339218}
   - component: {fileID: 1815339217}
   - component: {fileID: 1815339216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pluto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6897,7 +6946,7 @@ GameObject:
   - component: {fileID: 1838941842}
   - component: {fileID: 1838941841}
   - component: {fileID: 1838941840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Urano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7012,7 +7061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1946023100}
   - component: {fileID: 1946023101}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neptune_Orbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7050,119 +7099,6 @@ MonoBehaviour:
   Sun: {fileID: 1946023100}
   speed: 4
   rotationSpeed: 10
---- !u!1 &1946880297
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1946880301}
-  - component: {fileID: 1946880300}
-  - component: {fileID: 1946880299}
-  - component: {fileID: 1946880298}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &1946880298
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946880297}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1946880299
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946880297}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1946880300
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946880297}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1946880301
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946880297}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.31, y: -1.34, z: -16.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095635226
 GameObject:
   m_ObjectHideFlags: 0
@@ -7365,6 +7301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8561204958710065142, guid: 04e2e525e7f4a2f4bbfb805cb8918c3c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8454385597134429667, guid: 04e2e525e7f4a2f4bbfb805cb8918c3c, type: 3}
@@ -7454,6 +7394,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7528755723754719705, guid: 699abe8866a5c5f449880ce261e7f6d5, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7461,9 +7405,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3874227078630374522, guid: 699abe8866a5c5f449880ce261e7f6d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 761303025}
-    - targetCorrespondingSourceObject: {fileID: 3874227078630374522, guid: 699abe8866a5c5f449880ce261e7f6d5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 761303030}
   m_SourcePrefab: {fileID: 100100000, guid: 699abe8866a5c5f449880ce261e7f6d5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -7472,5 +7413,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 132753365}
   - {fileID: 2143500068270826515}
-  - {fileID: 1946880301}
   - {fileID: 382816456}
