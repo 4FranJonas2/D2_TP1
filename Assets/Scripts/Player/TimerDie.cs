@@ -4,6 +4,6 @@ public class TimerDie : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 3f);
     }
 }
